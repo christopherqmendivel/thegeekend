@@ -22,6 +22,8 @@ use yii\web\IdentityInterface;
  */
 class Jugadores extends ActiveRecord implements IdentityInterface
 {
+
+
     /**
      * {@inheritdoc}
      */
@@ -115,5 +117,19 @@ class Jugadores extends ActiveRecord implements IdentityInterface
     public function validateAuthKey($authKey)
     {
         // No hacemos nada aquí
+    }
+
+    protected function getNombreUsuario()
+    {
+        $usuario = static::findOne(['email' => $this->email]);
+
+        // Verificar si se encontró el usuario y si tiene el campo nombre
+        if ($usuario !== null && isset($usuario->nombre)) {
+            // Devolver el nombre del usuario encontrado
+            return $usuario->nombre;
+        } else {
+            // Si no se encontró el usuario o el campo nombre está vacío, devolver un valor predeterminado o lanzar una excepción según sea necesario
+            return 'Usuario desconocido';
+        }
     }
 }

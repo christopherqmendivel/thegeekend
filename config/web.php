@@ -22,7 +22,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\Jugadores',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -30,10 +30,15 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'port' => 587,
+                'encryption' => 'tls',
+                'username' => 'thegeekend24@gmail.com', 
+                'password' => 'gibw qjrt wkbe jouk', 
+            ],
+            'useFileTransport' => false, 
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

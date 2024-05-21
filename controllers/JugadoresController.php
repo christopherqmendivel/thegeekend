@@ -1,5 +1,4 @@
 <?php
-
 namespace app\controllers;
 
 use app\models\Jugadores;
@@ -7,6 +6,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use Yii;
 
 /**
  * JugadoresController implements the CRUD actions for Jugadores model.
@@ -79,12 +79,13 @@ class JugadoresController extends Controller
     {
         $model = new Jugadores();
 
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'idjugadores' => $model->idjugadores]);
+        if ($model->load(Yii::$app->request->post())) {
+            // Si prefieres guardar la contraseña en texto plano:
+            // $model->password = $model->password;
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->idjugadores]);
             }
-        } else {
-            $model->loadDefaultValues();
         }
 
         return $this->render('create', [
@@ -142,3 +143,4 @@ class JugadoresController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
+

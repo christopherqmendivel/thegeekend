@@ -83,7 +83,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     '<li>'
                         . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
                         . Html::submitButton(
-                            'Logout (' . Yii::$app->user->identity->username . ')',
+                            'Logout (' . Yii::$app->user->identity->nick . ')',
                             ['class' => 'btn btn-link logout']
                         )
                         . Html::endForm()
@@ -109,40 +109,39 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3 text-muted">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><a href="https://www.instagram.com/slastra97/?hl=es" target="_blank">Privacidad</a></h5>
+    <footer id="footer" class="footer">
+        <div class="container mt-0">
+            <div class="row row-1 mb-4">
+                <div class="col d-flex justify-content-center">
+                    <span class="title">correo@correo</span>
                 </div>
-
-                <div class="col-md-4">
-                    <h5><?= Html::a('Sobre Nosotros', ['/site/about'], ['class' => 'profile-link']) ?></h5>
-                </div>
-
-                <div class="col-md-4">
-                    <h5><a href="https://www.instagram.com/slastra97/?hl=es" target="_blank">Condiciones</a></h5>
-                </div>
-
             </div>
-            <hr>
-            <div class="text-center">
-                <!-- Redes Sociales -->
-                <a href="https://www.instagram.com/slastra97/?hl=es" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/beliallsst.slastra97/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@beliallsst516/videoss" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.twitch.tv/beliallsst" target="_blank" class="social-icon"><i class="fab fa-twitch"></i></a>
+
+            <div class="row row-2 contain-redes">
+                <div class="col d-flex justify-content-center">
+                    <?= Html::a('Gitlab', 'https://www.facebook.com', ['class' => 'social-link', 'target' => '_blank']) ?>
+                    <?= Html::a('Github', 'https://www.twitter.com', ['class' => 'social-link mx-3', 'target' => '_blank']) ?>
+                    <?= Html::a('LinkedIn', 'https://www.instagram.com', ['class' => 'social-link', 'target' => '_blank']) ?>
+                </div>
             </div>
-            <hr>
-            <p class="float-left">&copy; The Geekend <?= date('Y') ?></p>
-            <p class="float-right">Desarrollado por BelialLSST</p>
+
+            <div class="row row-3 contain-redes">
+                <div class="col d-flex justify-content-center">
+                    <span class="gotogether">Thegeekend</span>
+                </div>
+            </div>
+
+            <div class="row row-4 contain-redes">
+                <div class="col d-flex justify-content-center">
+                    <span class="copyright">© 2024 Thegeekend / Diseño por Sergio</span>
+                </div>
+            </div>
+
+            <div class="footer-right-image"></div>
+        </div>
         </div>
     </footer>
 
-    <!-- Integración de Bootstrap JS y jQuery -->
-    <?= Html::jsFile('https://code.jquery.com/jquery-3.5.1.slim.min.js') ?>
-    <?= Html::jsFile('https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js') ?>
-    <?= Html::jsFile('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js') ?>
 
     <?php $this->endBody() ?>
 </body>
