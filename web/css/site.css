@@ -1,12 +1,14 @@
 :root {
   --black: #191919;
   --whitev2: #ccd6f6;
-  --transition: transform 0.3s ease-in-out;
+  --transition: 0.3s ease-in-out;
   --green: #60992d;
   --border-radius: 10px;
   --bg-color: #1d1d1d;
   --bg-color2: #191919;
   --bg-card: #312f2f;
+  --scale-hover: scale(1.1);
+
 }
 
 main > .container {
@@ -107,8 +109,6 @@ a.desc:after {
 /*------------------------------------------------Footer-------------------------------------------------------------------*/
 /* Estilos del footer */
 .footer {
-  background-color: #1a1a1a;
-  color: #fff;
   text-align: center;
   padding: 10px 0; /* Aumenta el espacio interno del footer */
 }
@@ -327,6 +327,10 @@ p {
   font-family: "Roboto Flex", sans-serif;
 }
 
+footer span{
+  font-family: "Roboto Flex", sans-serif;
+
+}
 .btn-clean {
   background-color: var(--green) !important;
   color: white !important;
@@ -500,6 +504,12 @@ main > .container {
   background-color: unset !important;
   align-items: center;
   margin-bottom: 15rem;
+  border: none;
+  transition: var(--transition);
+}
+
+.card-container .card:hover {
+  transform: var(--scale-hover);
 }
 
 .card-container .card .card-body {
@@ -542,6 +552,7 @@ main > .container {
 /* FOOTER */
 .footer {
   padding-block: 3.5rem;
+  color: var(--whitev2);
 }
 
 .footer .social {
@@ -550,6 +561,8 @@ main > .container {
   align-items: center;
   gap: 2rem;
   justify-content: center;
+  transition: var(--transition);
+
 }
 
 .footer .social .icon-social {
