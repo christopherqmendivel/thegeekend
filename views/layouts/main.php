@@ -43,20 +43,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md fixed-top',
             ],
         ]);
 
+        // Menú principal
         echo Nav::widget([
-            'options' => ['class' => 'navbar-nav'],
+            'options' => ['class' => 'navbar-nav mr-auto'], // Elementos del menú principal a la izquierda
             'items' => Yii::$app->user->isGuest ? (
                 // Menú para usuarios no registrados
                 [
                     ['label' => 'Inicio', 'url' => ['/site/index']],
                     ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
                     ['label' => 'Contactar', 'url' => ['/site/contact']],
-                    ['label' => 'Identificarse', 'url' => ['/site/login']],  // Enlace al formulario de login
-                    ['label' => 'Registrarse', 'url' => ['/registro-usuarios/create']],
                 ]
             ) : (
                 // Menú para usuarios registrados
@@ -80,7 +79,25 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             ['label' => 'Venden', 'url' => ['/venden/index']],
                         ],
                     ],
-                    '<li>'
+                ]
+            ),
+        ]);
+
+        // Contenedor para los elementos de login y registro
+        echo '<div class="navbar-nav ml-auto">'; // Contenedor con ml-auto para alinear a la derecha
+
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav'],
+            'items' => Yii::$app->user->isGuest ? (
+                // Menú para usuarios no registrados
+                [
+                    ['label' => '<i class="fas fa-sign-in-alt"></i> Identificarse', 'url' => ['/site/login'], 'encode' => false, 'options' => ['class' => 'nav-item']],
+                    ['label' => 'Registrarse', 'url' => ['/registro-usuarios/create'], 'options' => ['class' => 'nav-item']],
+                ]
+            ) : (
+                // Menú para usuarios registrados
+                [
+                    '<li class="nav-item">'
                         . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
                         . Html::submitButton(
                             'Logout (' . Yii::$app->user->identity->nick . ')',
@@ -91,6 +108,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 ]
             ),
         ]);
+
+        echo '</div>'; // Cierra el contenedor de login y registro
 
         NavBar::end();
         ?>
@@ -109,35 +128,43 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer w-100">
         <div class="container mt-0">
-            <div class="row row-1 mb-4">
-                <div class="col d-flex justify-content-center">
-                    <span class="title">correo@correo</span>
+            <div class="row row-footer">
+                <div class="col-3 d-flex align-items-center">
+                    <h3 class="title m-0">the geekend</h3>
+                </div>
+                <div class="col-6">
+                    <span>
+                        The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+                    </span>
+                </div>
+                <div class="col-3">
+                    <div class="social">
+
+                        <?php
+                        echo Html::a(
+                            '<i class="fa-brands fa-twitter"></i>',
+                            ['site/twitter'],
+                            ['class' => 'twitter icon-social', 'aria-label' => 'twitter']
+                        );
+
+                        echo Html::a(
+                            '<i class="fa-brands fa-linkedin-in"></i>',
+                            ['site/linkedin'],
+                            ['class' => 'linkedin icon-social', 'aria-label' => 'LinkedIn']
+                        );
+
+                        echo Html::a(
+                            '<i class="fa-brands fa-gitlab"></i>',
+                            ['site/gitlab'],
+                            ['class' => 'gitlab icon-social', 'aria-label' => 'GitLab']
+                        );
+                        ?>
+
+                    </div>
                 </div>
             </div>
-
-            <div class="row row-2 contain-redes">
-                <div class="col d-flex justify-content-center">
-                    <?= Html::a('Gitlab', 'https://www.facebook.com', ['class' => 'social-link', 'target' => '_blank']) ?>
-                    <?= Html::a('Github', 'https://www.twitter.com', ['class' => 'social-link mx-3', 'target' => '_blank']) ?>
-                    <?= Html::a('LinkedIn', 'https://www.instagram.com', ['class' => 'social-link', 'target' => '_blank']) ?>
-                </div>
-            </div>
-
-            <div class="row row-3 contain-redes">
-                <div class="col d-flex justify-content-center">
-                    <span class="gotogether">Thegeekend</span>
-                </div>
-            </div>
-
-            <div class="row row-4 contain-redes">
-                <div class="col d-flex justify-content-center">
-                    <span class="copyright">© 2024 Thegeekend / Diseño por Sergio</span>
-                </div>
-            </div>
-
-            <div class="footer-right-image"></div>
         </div>
         </div>
     </footer>

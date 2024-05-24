@@ -33,8 +33,16 @@ class AppAsset extends AssetBundle {
         'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
 
         // FUENTE - PARRAFOS
-        'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'
+        'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
 
+
+        // FUENTE MARKET PERMANENT - GOOGLE FONTS (TITULOS)
+        'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',
+
+        // ROBOTO FLEX
+        'https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap'
+
+       
 
     ];
     public $js = [
