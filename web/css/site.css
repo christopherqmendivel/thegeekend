@@ -8,7 +8,8 @@
   --bg-color2: #191919;
   --bg-card: #312f2f;
   --scale-hover: scale(1.1);
-
+  --text-danger: #DC3545;
+  --bg-form: #2a2b38;
 }
 
 main > .container {
@@ -267,6 +268,12 @@ a.desc:after {
   margin-top: 20px;
 }
 
+.container-create-user {
+  background: url(../images/bg-register.jpeg);
+  background-size: cover;
+  position: relative;
+}
+
 .container-create-user .s-1 .form {
   display: flex;
   flex-direction: column;
@@ -283,16 +290,10 @@ a.desc:after {
   right: 0;
 }
 
-.container-create-user .s-1 input {
-  border-radius: 1rem !important;
-}
 
 .container-create-user .form-register {
-  margin: 4rem;
-  background: white !important;
   z-index: 1;
-  padding: 2rem 5rem;
-  min-width: 40rem;
+  padding: 2rem 3rem;
   border-radius: 2rem;
 }
 
@@ -303,8 +304,18 @@ a.desc:after {
 
 /* GLOBALES */
 
+.btn.btn-clean{
+  box-shadow: unset !important;
+  border-color: unset !important;
+  border: none !important;
+}
 body {
   background-color: var(--bg-color) !important;
+  font-family: "Roboto Flex", sans-serif !important;
+}
+
+.help-block {
+  color: var(--text-danger);
 }
 
 h1,
@@ -318,6 +329,13 @@ h6,
   font-weight: 400;
   font-style: normal;
   color: var(--green);
+}
+
+main .container {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 p {
@@ -345,8 +363,17 @@ footer span{
 /* HOME */
 body {
   overflow-x: hidden;
+   padding-top: 5.4rem !important;
 }
 /* HEADER */
+
+header {
+  z-index: 9999 !important;
+  height: 5.4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
 
 header nav .container {
   max-width: unset;
@@ -361,10 +388,9 @@ header nav .container {
   color: var(--green) !important;
 }
 
-header #w0 {
+header nav {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  height: 5rem;
   border-bottom: 1px solid #8080806b;
   background: rgba(0, 0, 0, 0.8);
 }
@@ -451,6 +477,7 @@ header .navbar-nav.nav {
 main > .container {
   max-width: unset;
   padding: 0;
+  height: 100%;
 }
 
 .video-container {
@@ -581,4 +608,197 @@ main > .container {
 .footer .social .icon-social:hover {
   color: var(--green) !important;
   border: 1px solid var(--green);
+}
+
+
+
+/* VISTA REGISTAR */
+
+.container-create-user .form-register {
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border-radius: var(--border-radius);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-register .form-style{
+  height: 48px !important;
+}
+
+.form-group input:-ms-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-webkit-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-ms-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-webkit-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-control:focus {
+  box-shadow: unset !important;
+}
+
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none !important;
+  color: #c4c3ca;
+  background-color: #1f2029 !important;
+  border: none !important;
+  -webkit-transition: all 200ms linear !important;
+  transition: all 200ms linear !important;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+
+
+/* VISTA LOGIN */
+.row-login {
+  width: 100%;
+  justify-content: center;
+}
+
+.site-login {
+  background: url(../images/login.jpeg);
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#login-form .form-group label{
+    display: none !important;
+}
+
+.invalid-feedback {
+  font-size: initial !important;
+}
+
+.login-s2 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg) !important;
+  min-height: 500px;
+  min-width: 500px;
+  padding: 32px 48px;
+  background-color: var(--bg-form);
+  border-radius: var(--border-radius);
+}
+
+.site-login .form-style {
+  padding-left: 20px;
+  height: 48px !important;
+}
+
+.reset-password{
+  text-align: center;
+  display: block;
+  color: var(--whitev2);
+  opacity: .7;
+  transition: var(--transition);
+}
+
+.reset-password:hover {
+  color: var(--green);
+  opacity: 1;
+} 
+
+
+
+
+/* CONTACTO */
+.site-contact {
+  background: url(../images/bg-contact.jpeg);
+  background-size: cover;
+  position: relative;
+}
+
+#contact-form {
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border-radius: var(--border-radius);
+  padding: 32px 48px;
+  max-width: 600px;
+}
+
+.site-contact .invalid-feedback {
+  text-align: left;
+}
+
+.site-contact #contact-form label{
+  display: none;
+}
+
+
+.site-contact .field-contactform-email, .field-contactform-subject, .field-contactform-body{
+  margin-bottom: 1rem;
+}
+
+#contactform-body {
+  height: initial;
+}
+
+.btn-contact {
+  width: 100%;
+  background-color: var(--green) !important;
+  border-color: none !important;
+  box-shadow: unset !important;
 }

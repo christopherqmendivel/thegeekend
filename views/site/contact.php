@@ -10,38 +10,56 @@ use yii\bootstrap4\Html;
 $this->title = 'Contacto';
 ?>
 
-<div class="site-contact text-center">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="site-contact w-100 h-100 text-center">
+    <div class="overlay"></div>
 
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')) : ?>
 
         <div class="alert alert-success">
             Gracias por contactarnos. Te responderemos lo antes posible.
         </div>
 
-    <?php else: ?>
+    <?php else : ?>
 
-        <p>
-            Si tienes consultas comerciales u otras preguntas, por favor completa el siguiente formulario para contactarnos.
-            Gracias.
-        </p>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
+
+        <div class="row h-100 justify-content-center">
+            <div class="col d-flex justify-content-center align-items-center">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                <h1><?= Html::encode($this->title) ?></h1>
+                <p>
+                    Si tienes consultas comerciales u otras preguntas, por favor completa el siguiente formulario para contactarnos.
+                    Gracias.
+                </p>
+                <?= $form->field($model, 'name')->label('Nombre:')
+                    ->textInput(
+                        [
+                            'autofocus' => true,
+                            'class' => 'form-style'
+                        ]
 
-                    <?= $form->field($model, 'name')->label('Nombre:')->textInput(['autofocus' => true]) ?>
+                    )
+                ?>
 
-                    <?= $form->field($model, 'email')->label('Correo Electrónico:') ?>
+                <?= $form->field($model, 'email', ['options' => ['class' => '']])
+                    ->label('Correo Electrónico:')
+                    ->textInput(['class' => 'form-style'])
+                ?>
 
-                    <?= $form->field($model, 'subject')->label('Asunto:') ?>
+                <?= $form->field($model, 'subject', ['options' => ['class' => '']])
+                    ->label('Asunto:')
+                    ->textInput(['class' => 'form-style'])
+                ?>
 
-                    <?= $form->field($model, 'body')->label('Mensaje:')->textarea(['rows' => 6]) ?>
+                <?= $form->field($model, 'body', ['options' => ['class' => '']])
+                    ->label('Mensaje:')
+                    ->textarea(['rows' => 6, 'class' => 'form-style'])
+                ?>
 
-                    <div class="form-group text-center">
-                        <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
+                <div class="form-group text-center">
+                    <?= Html::submitButton('Enviar', ['class' => 'btn btn-contact btn-primary ', 'name' => 'contact-button']) ?>
+                </div>
 
                 <?php ActiveForm::end(); ?>
 

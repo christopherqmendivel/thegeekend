@@ -40,14 +40,19 @@ class AppAsset extends AssetBundle {
         'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',
 
         // ROBOTO FLEX
-        'https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap'
+        'https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap',
 
-       
+        // MATERIAL ICONS (GOOGLE)
+        'https://fonts.googleapis.com/icon?family=Material+Icons'
+
 
     ];
     public $js = [
         // LIGHT BOX
-        'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js'
+        'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js',
+
+        // SCRIPT
+        'js/script.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -43,7 +43,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md fixed-top',
+                'class' => 'navbar navbar-expand-md h-100',
             ],
         ]);
 
