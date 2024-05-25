@@ -56,6 +56,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     ['label' => 'Inicio', 'url' => ['/site/index']],
                     ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
                     ['label' => 'Contactar', 'url' => ['/site/contact']],
+
                 ]
             ) : (
                 // Menú para usuarios registrados

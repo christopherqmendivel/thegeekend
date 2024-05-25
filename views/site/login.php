@@ -31,7 +31,6 @@ use yii\bootstrap4\Html;
                     <?= $form->field($model, 'email')
                         ->textInput(
                             [
-                                'autofocus' => true,
                                 'class' => 'form-style',
                                 'placeholder' => 'Tu correo'
                             ]
@@ -41,7 +40,6 @@ use yii\bootstrap4\Html;
                     <?= $form->field($model, 'password')
                         ->passwordInput(
                             [
-                                'autofocus' => true,
                                 'class' => 'form-style',
                                 'placeholder' => 'Tu contraseña'
                             ]

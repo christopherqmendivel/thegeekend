@@ -35,7 +35,6 @@ $this->title = 'Contacto';
                 <?= $form->field($model, 'name')->label('Nombre:')
                     ->textInput(
                         [
-                            'autofocus' => true,
                             'class' => 'form-style',
                             'placeholder' => 'Tu nombre'
                         ]

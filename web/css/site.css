@@ -10,6 +10,7 @@
   --scale-hover: scale(1.1);
   --text-danger: #DC3545;
   --bg-form: #2a2b38;
+  --hover-bg: #66A52D;
 }
 
 main > .container {
@@ -335,7 +336,8 @@ main .container {
   min-height: 92vh;
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
+  width: 100% !important;
 }
 
 p {
@@ -749,7 +751,6 @@ main > .container {
   text-align: center;
   display: block;
   color: var(--whitev2);
-  opacity: .7;
   transition: var(--transition);
 }
 
@@ -824,4 +825,38 @@ main > .container {
 
 .site-about .row img {
   border-radius: var(--border-radius);
+}
+
+
+
+/* RESET PASSWORD */
+.reset-password {
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border-radius: var(--border-radius);
+  padding: 32px 48px;
+  max-width: 500px;} 
+
+
+#request-password-reset-form label {
+  display: none;
+}
+
+.btn-reset-pass{
+  background-color: var(--green) !important;
+  color: white !important;
+}
+
+.container-reset {
+  background: url(../images/reset.jpeg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.form-reset-i {
+  padding-left: 20px;
 }
