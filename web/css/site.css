@@ -96,7 +96,7 @@ a.desc:after {
 }
 /* Cambia el estilo del hover en el enlace del menú */
 .navbar-nav .nav-item:hover > .nav-link {
-  color: #92d243 !important; /* Color del texto al pasar el ratón */
+  color: var(--green) !important; /* Color del texto al pasar el ratón */
 }
 
 /*------------------------------------------------Menú desplegable-------------------------------------------------------------------*/
@@ -785,8 +785,12 @@ main > .container {
 
 .site-contact #contact-form label{
   display: none;
+
 }
 
+.site-contact #contact-form input {
+  padding: 13px 20px !important;
+}
 
 .site-contact .field-contactform-email, .field-contactform-subject, .field-contactform-body{
   margin-bottom: 1rem;
@@ -796,9 +800,28 @@ main > .container {
   height: initial;
 }
 
+.field-contactform-body textarea {
+  padding: 13px 20px !important;
+}
+
 .btn-contact {
   width: 100%;
   background-color: var(--green) !important;
   border-color: none !important;
   box-shadow: unset !important;
+}
+
+
+/* SITE ABOUT */
+.site-about .row {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.site-about .row p {
+  max-width: 450px;
+}
+
+.site-about .row img {
+  border-radius: var(--border-radius);
 }

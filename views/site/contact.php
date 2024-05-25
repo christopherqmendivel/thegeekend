@@ -24,7 +24,7 @@ $this->title = 'Contacto';
 
 
         <div class="row h-100 justify-content-center">
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col d-flex justify-content-center align-items-center animate__animated animate__fadeIn">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
                 <h1><?= Html::encode($this->title) ?></h1>
@@ -36,7 +36,8 @@ $this->title = 'Contacto';
                     ->textInput(
                         [
                             'autofocus' => true,
-                            'class' => 'form-style'
+                            'class' => 'form-style',
+                            'placeholder' => 'Tu nombre'
                         ]
 
                     )
@@ -44,18 +45,19 @@ $this->title = 'Contacto';
 
                 <?= $form->field($model, 'email', ['options' => ['class' => '']])
                     ->label('Correo Electrónico:')
-                    ->textInput(['class' => 'form-style'])
+                    ->textInput(['class' => 'form-style', 'placeholder' => 'Tu correo electrónico'])
                 ?>
 
                 <?= $form->field($model, 'subject', ['options' => ['class' => '']])
                     ->label('Asunto:')
-                    ->textInput(['class' => 'form-style'])
+                    ->textInput(['class' => 'form-style', 'placeholder' => 'El asunto de tu mensaje'])
                 ?>
 
                 <?= $form->field($model, 'body', ['options' => ['class' => '']])
                     ->label('Mensaje:')
-                    ->textarea(['rows' => 6, 'class' => 'form-style'])
+                    ->textarea(['rows' => 6, 'class' => 'form-style', 'placeholder' => 'Escribe tu mensaje aquí'])
                 ?>
+
 
                 <div class="form-group text-center">
                     <?= Html::submitButton('Enviar', ['class' => 'btn btn-contact btn-primary ', 'name' => 'contact-button']) ?>
