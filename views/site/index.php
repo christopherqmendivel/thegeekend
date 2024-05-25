@@ -25,7 +25,7 @@ $images = scandir($imagePath);
 
 
     <!-- Presentación -->
-    <div class="presentation">
+    <div class="presentation animate__animated animate__fadeIn">
         <h2 class="mb-4">Bienvenido a tu Mundo Friki</h2>
         <p class="mb-2">Ingresa a tu propio reino friki y explora un universo repleto de eventos inolvidables. Nos dedicamos con pasión a brindarte experiencias únicas y divertidas.</p>
         <p class="mb-2 w-100">¿A qué esperas? Únete a nuestro próximo evento y no te arrepentirás.</p>

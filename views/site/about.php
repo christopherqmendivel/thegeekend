@@ -12,10 +12,10 @@ $this->title = 'Sobre Nosotros';
     <h1 class="text-center" style="margin:3rem;"><?= Html::encode($this->title) ?></h1>
 
     <div class="row mt-4 d-flex justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-5 animate__animated animate__fadeInLeft">
             <?= Html::img('@web/images/sobreNosotros/PrimeraNosotros.jpg', ['alt' => 'Empresa Fantasia', 'class' => 'about-image img-fluid', 'style' => 'max-height: 400px;']) ?>
         </div>
-        <div class="col-md-5 d-flex align-items-center about-text">
+        <div class="col-md-5 d-flex align-items-center about-text animate__animated animate__fadeInRight">
             <p>
                 Nuestro equipo está compuesto por fanáticos del anime y las películas frikis, lo que nos permite entender y capturar la esencia de estos universos en cada uno de nuestros eventos. Desde convenciones donde podrás codearte con tus personajes favoritos hasta proyecciones especiales que te transportarán a mundos llenos de aventuras y emociones, nos aseguramos de ofrecer experiencias inolvidables para todos nuestros visitantes.
             </p>
@@ -23,10 +23,10 @@ $this->title = 'Sobre Nosotros';
     </div>
 
     <div class="row mt-4 d-flex justify-content-center">
-        <div class="col-md-5 order-md-2 d-flex justify-content-center">
+        <div class="col-md-5 order-md-2 d-flex justify-content-center animate__animated animate__fadeInRight">
             <?= Html::img('@web/images/sobreNosotros/SegundaNosotros.jpg', ['alt' => 'Empresa Fantasia', 'class' => 'second-image about-image img-fluid', 'style' => 'max-height: 400px;']) ?>
         </div>
-        <div class="col-md-5 order-md-1 d-flex align-items-center about-text">
+        <div class="col-md-5 order-md-1 d-flex align-items-center about-text animate__animated animate__fadeInLeft">
             <p>
                 Sumérgete en nuestras convenciones, donde podrás conocer a tus héroes de anime en persona, participar en actividades temáticas y comprar merchandising exclusivo. En nuestras proyecciones especiales, te invitamos a vivir aventuras épicas y emocionantes junto a tus personajes favoritos en la pantalla grande.
             </p>
