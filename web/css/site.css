@@ -8,9 +8,9 @@
   --bg-color2: #191919;
   --bg-card: #312f2f;
   --scale-hover: scale(1.1);
-  --text-danger: #DC3545;
+  --text-danger: #dc3545;
   --bg-form: #2a2b38;
-  --hover-bg: #66A52D;
+  --hover-bg: #66a52d;
 }
 
 main > .container {
@@ -291,7 +291,6 @@ a.desc:after {
   right: 0;
 }
 
-
 .container-create-user .form-register {
   z-index: 1;
   padding: 2rem 3rem;
@@ -305,7 +304,7 @@ a.desc:after {
 
 /* GLOBALES */
 
-.btn.btn-clean{
+.btn.btn-clean {
   box-shadow: unset !important;
   border-color: unset !important;
   border: none !important;
@@ -313,6 +312,7 @@ a.desc:after {
 body {
   background-color: var(--bg-color) !important;
   font-family: "Roboto Flex", sans-serif !important;
+  color: var(--whitev2) !important;
 }
 
 .help-block {
@@ -347,9 +347,8 @@ p {
   font-family: "Roboto Flex", sans-serif;
 }
 
-footer span{
+footer span {
   font-family: "Roboto Flex", sans-serif;
-
 }
 .btn-clean {
   background-color: var(--green) !important;
@@ -364,8 +363,8 @@ footer span{
 
 /* HOME */
 body {
-  overflow-x: hidden;
-   padding-top: 5.4rem !important;
+  /* overflow-x: hidden;*/
+  padding-top: 5.4rem !important;
 }
 /* HEADER */
 
@@ -591,7 +590,6 @@ main > .container {
   gap: 2rem;
   justify-content: center;
   transition: var(--transition);
-
 }
 
 .footer .social .icon-social {
@@ -612,13 +610,11 @@ main > .container {
   border: 1px solid var(--green);
 }
 
-
-
 /* VISTA REGISTAR */
 
 .container-create-user .form-register {
   background-color: #2a2b38;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg") !important;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
@@ -633,53 +629,53 @@ main > .container {
   margin: 0 auto;
 }
 
-.form-register .form-style{
+.form-register .form-style {
   height: 48px !important;
 }
 
-.form-group input:-ms-input-placeholder  {
+.form-group input:-ms-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input::-moz-placeholder  {
+.form-group input::-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:-moz-placeholder  {
+.form-group input:-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input::-webkit-input-placeholder  {
+.form-group input::-webkit-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus:-ms-input-placeholder  {
+.form-group input:focus:-ms-input-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus::-moz-placeholder  {
+.form-group input:focus::-moz-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus:-moz-placeholder  {
+.form-group input:focus:-moz-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus::-webkit-input-placeholder  {
+.form-group input:focus::-webkit-input-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .form-control:focus {
   box-shadow: unset !important;
@@ -701,9 +697,8 @@ main > .container {
   border: none !important;
   -webkit-transition: all 200ms linear !important;
   transition: all 200ms linear !important;
-  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
 }
-
 
 /* VISTA LOGIN */
 .row-login {
@@ -718,15 +713,15 @@ main > .container {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, .5);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#login-form .form-group label{
-    display: none !important;
+#login-form .form-group label {
+  display: none !important;
 }
 
 .invalid-feedback {
@@ -747,7 +742,7 @@ main > .container {
   height: 48px !important;
 }
 
-.reset-password{
+.reset-password {
   text-align: center;
   display: block;
   color: var(--whitev2);
@@ -757,10 +752,7 @@ main > .container {
 .reset-password:hover {
   color: var(--green);
   opacity: 1;
-} 
-
-
-
+}
 
 /* CONTACTO */
 .site-contact {
@@ -771,7 +763,7 @@ main > .container {
 
 #contact-form {
   background-color: #2a2b38;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg") !important;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
@@ -784,16 +776,17 @@ main > .container {
   text-align: left;
 }
 
-.site-contact #contact-form label{
+.site-contact #contact-form label {
   display: none;
-
 }
 
 .site-contact #contact-form input {
   padding: 13px 20px !important;
 }
 
-.site-contact .field-contactform-email, .field-contactform-subject, .field-contactform-body{
+.site-contact .field-contactform-email,
+.field-contactform-subject,
+.field-contactform-body {
   margin-bottom: 1rem;
 }
 
@@ -812,7 +805,6 @@ main > .container {
   box-shadow: unset !important;
 }
 
-
 /* SITE ABOUT */
 .site-about .row {
   max-width: 1250px;
@@ -827,25 +819,23 @@ main > .container {
   border-radius: var(--border-radius);
 }
 
-
-
 /* RESET PASSWORD */
 .reset-password {
   background-color: #2a2b38;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') !important;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg") !important;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
   border-radius: var(--border-radius);
   padding: 32px 48px;
-  max-width: 500px;} 
-
+  max-width: 500px;
+}
 
 #request-password-reset-form label {
   display: none;
 }
 
-.btn-reset-pass{
+.btn-reset-pass {
   background-color: var(--green) !important;
   color: white !important;
 }
@@ -859,4 +849,38 @@ main > .container {
 
 .form-reset-i {
   padding-left: 20px;
+}
+
+
+
+/* TORNEOS */
+.container-torneos {
+  max-width: 1250px;
+}
+
+.container-torneos .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.row-one-torneos {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.col-circle {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-two-torneos {
+  margin-top: 12rem !important;
+}
+
+.container-torneos .col-two-torneos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
