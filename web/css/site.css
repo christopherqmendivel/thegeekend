@@ -887,6 +887,7 @@ main > .container {
 }
 
 /* PARTICIPAN INDEX */
+
 .participan-index {
   width: 100%;
   display: flex;
@@ -894,4 +895,31 @@ main > .container {
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
+}
+
+
+/* RESET - PASSWORD -INDEX */
+#w4-success-0 {
+  position: absolute;
+  top: 0;
+  border: unset !important;
+  background-color: unset !important;
+  padding-top: 5.5rem;
+  z-index: 1;
+}
+
+#w4-success-0 .alert.alert-success.res-send{
+  background-color: var(--green) !important;
+  color: var(--whitev2);
+  border: unset !important;
+}
+
+
+/* CONFIRMAR - PASSWORD - INDEX */
+#w5-success-0 {
+  position: absolute !important;
+  top: 0 !important;
+  background: unset;
+  border: none;
+  padding-top: 5.8rem;
 }

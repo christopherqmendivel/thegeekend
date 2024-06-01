@@ -66,9 +66,10 @@ use yii\helpers\Html;
 <body>
     <div class="container">
         <div class="logo-container">
-            <div class="logo">
-                <img src="https://i.ibb.co/d7vj9ch/logo.png" class="logo-pub" alt="Logo EcoPlayas">
-            </div>
+            <!--<div class="logo">
+            Cambia esto por un logo propio al igual que el contenido    
+            <img src="https://i.ibb.co/d7vj9ch/logo.png" class="logo-pub" alt="Logo EcoPlayas">
+            </div> -->
 
 
         </div>

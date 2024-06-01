@@ -36,7 +36,7 @@ $config = [
                 'port' => 587,
                 'encryption' => 'tls',
                 'username' => 'thegeekend24@gmail.com', 
-                'password' => 'gibw qjrt wkbe jouk', 
+                'password' => 'hxij szip gqlc qbhn', /* NUEVO APP DE TECEROS - NECESITAS TENER ACTIVADO LA AUTENTICACIÓN EN DOS PASOS PARA PODER GENERAR (LO ACTIVE)*/
             ],
             'useFileTransport' => false, 
         ],
