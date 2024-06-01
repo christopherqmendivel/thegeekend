@@ -303,6 +303,9 @@ a.desc:after {
 }
 
 /* GLOBALES */
+table {
+  color: var(--whitev2) !important;
+}
 
 .btn.btn-clean {
   box-shadow: unset !important;
