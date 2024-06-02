@@ -48,19 +48,20 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         ]);
 
         // Menú principal
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav mr-auto'], // Elementos del menú principal a la izquierda
-            'items' => Yii::$app->user->isGuest ? (
-                // Menú para usuarios no registrados
-                [
-                    ['label' => 'Inicio', 'url' => ['/site/index']],
-                    ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
-                    ['label' => 'Contactar', 'url' => ['/site/contact']],
+        $menuItems = [];
+        if (Yii::$app->user->isGuest) {
+            // Menú para usuarios no registrados
+            $menuItems = [
+                ['label' => 'Inicio', 'url' => ['/site/index']],
+                ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
+                ['label' => 'Contactar', 'url' => ['/site/contact']],
+                ['label' => 'Eventos', 'url' => ['/eventos/index']], /* Si lo quieres cuando el usuario esté logeado, bórralo de aquí */
 
-                ]
-            ) : (
-                // Menú para usuarios registrados
-                [
+            ];
+        } else {
+            // Menú para usuarios registrados
+            if (Yii::$app->user->identity->roles === 'admin') {
+                $menuItems = [
                     ['label' => 'Torneos', 'url' => ['site/torneosadmin']],
                     ['label' => 'Participan', 'url' => ['site/jugadoresportorneo']],
                     [
@@ -80,12 +81,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             ['label' => 'Venden', 'url' => ['/venden/index']],
                         ],
                     ],
-                ]
-            ),
+                ];
+            } else {
+                $menuItems = [
+                    ['label' => 'Inicio', 'url' => ['/site/index']],
+                    ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
+                    ['label' => 'Contactar', 'url' => ['/site/contact']],
+                    ['label' => 'Eventos', 'url' => ['/eventos/index']],
+                ];
+            }
+        }
+
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav mr-auto'], 
+            'items' => $menuItems,
         ]);
 
         // Contenedor para los elementos de login y registro
-        echo '<div class="navbar-nav ml-auto">'; // Contenedor con ml-auto para alinear a la derecha
+        echo '<div class="navbar-nav ml-auto">'; 
 
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
@@ -110,7 +123,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ),
         ]);
 
-        echo '</div>'; // Cierra el contenedor de login y registro
+        echo '</div>'; 
 
         NavBar::end();
         ?>

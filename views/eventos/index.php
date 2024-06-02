@@ -10,7 +10,6 @@ use yii\grid\GridView;
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Eventos';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <!DOCTYPE html>
 <html lang="es">

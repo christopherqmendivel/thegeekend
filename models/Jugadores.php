@@ -16,7 +16,7 @@ use yii\web\IdentityInterface;
  * @property string|null $nombregrupo
  * @property string $email
  * @property string $password
- *
+  * @property string $roles
  * @property Torneos[] $idtorneos
  * @property Participan[] $participans
  */
@@ -44,6 +44,7 @@ class Jugadores extends ActiveRecord implements IdentityInterface
             [['nick', 'nombregrupo'], 'string', 'max' => 25],
             [['nombre', 'email'], 'string', 'max' => 50],
             [['password'], 'string', 'max' => 255],
+            [['roles'], 'string', 'max' => 10],
             [['nick'], 'unique'],
         ];
     }
@@ -61,6 +62,7 @@ class Jugadores extends ActiveRecord implements IdentityInterface
             'nombregrupo' => 'Nombregrupo',
             'email' => 'Email',
             'password' => 'Contraseña',
+            'roles' => 'Roles',
         ];
     }
 
